@@ -6,6 +6,7 @@ import (
 	"bc-labs-lunch-bot/internal/lunch/service"
 )
 
+//LunchService Dependency Injection
 func InitializeLunchServiceImpl() service.LunchService {
 	lunchRepository := repository.NewLunchRepository(config.OpenDB())
 	lunchService := service.NewLunchService(lunchRepository)

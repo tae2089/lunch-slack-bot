@@ -6,6 +6,7 @@ import (
 	lunch "bc-labs-lunch-bot/internal/lunch/repository"
 )
 
+//CallBackService Dependency Injection
 func InitializeCallbackServiceImpl() service.CallbackService {
 	lunchRepository := lunch.NewLunchRepository(config.OpenDB())
 	participantRepository := lunch.NewParticipantsRepository(config.OpenDB())
